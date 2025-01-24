@@ -1,21 +1,19 @@
 import React from "react";
-import tripleDot from "../../../public/images/icon-ellipsis.svg"
+import tripleDot from "../../../public/images/icon-ellipsis.svg";
 import Image from "next/image";
-
-
 
 const FolderCard = ({
   icon,
   tag,
   hoursTracked,
   lastWeekHour,
-  variant
+  variant,
 }: {
   icon: string;
   tag: string;
   hoursTracked: number;
   lastWeekHour: number;
-  variant: string
+  variant: string;
 }) => {
   return (
     <div className=" h-[250px] border border-darkBlue rounded-2xl relative ">
@@ -38,8 +36,10 @@ const FolderCard = ({
             <Image src={tripleDot} alt="triple dots" />
           </span>
         </div>
-        <h3 className="text-4xl font-rubikLight ">{hoursTracked}hrs</h3>
-        <p className="text-paleBlue  mt-2">Last Week - {lastWeekHour}hrs</p>
+        <div className="flex justify-between md:flex-col ">
+          <h3 className="text-4xl font-rubikLight ">{hoursTracked}hrs</h3>
+          <p className="text-paleBlue  mt-2">Last Week - {lastWeekHour}hrs</p>
+        </div>
       </div>
     </div>
   );
