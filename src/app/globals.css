@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+
+@font-face {
+  font-family : "rubik-regular";
+  src: url("../../public/fonts/Rubik/static/Rubik-Regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "rubik-bold";
+  src: url("../../public/fonts/Rubik/static/Rubik-Bold.ttf");
+}
+
+@font-face {
+  font-family: "rubik-light";
+  src: url("../../public/fonts/Rubik/static/Rubik-Light.ttf");
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: hsl(226, 43%, 10%);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  body{
+  height: 100vh;
+  }
+  
 }
